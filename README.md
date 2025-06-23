@@ -26,6 +26,46 @@ This project is a fully automated, serverless billing system that extracts data 
 - 100% Serverless and real-time automation
 
 ---
+## 🛠️ Setup Instructions
+⚠️ Make sure you have appropriate AWS IAM access before proceeding.
+
+1.Create an S3 Bucket
+
+ Enable event trigger on object creation for Lambda
+
+2.Deploy Lambda Function
+
+  Add environment variables like:
+
+    TABLE_NAME, SENDER_EMAIL, RECIPENT_EMAIL
+
+
+  Attach IAM Role with access to:
+
+    S3, Textract, DynamoDB, SES
+
+3.Set Up DynamoDB
+
+Create a table with appropriate keys (e.g., invoice_id)
+
+4.Verify Email in SES
+
+verify sender email addresses
+
+
+##📌 Key Takeaways
+S3: Learned how to trigger workflows on file uploads
+
+DynamoDB: Understood fast, flexible NoSQL data modeling
+
+IAM: Set up secure role-based access between AWS services
+
+Lambda: Became confident in deploying/debugging serverless functions
+
+Textract: Got hands-on with ML for document parsing
+
+Environment Variables: One small typo in a key name caused a silent fail — painful but educational 😅
+
 
 ## 🔁 Workflow Overview
 
@@ -35,3 +75,6 @@ graph TD;
     B --> C[🧠 Amazon Textract Extracts Data]
     C --> D[💾 Data Stored in DynamoDB]
     D --> E[✉️ Email Sent via Amazon SES]
+
+
+
