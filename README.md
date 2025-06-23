@@ -1,75 +1,37 @@
-#𝐀𝐧 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐞𝐝 𝐄𝐦𝐚𝐢𝐥 𝐁𝐢𝐥𝐥𝐢𝐧𝐠 𝐑𝐞𝐜𝐞𝐢𝐩𝐭 𝐒𝐲𝐬𝐭𝐞𝐦
+# 📊 From Upload to Inbox — Billing Automation with AWS
 
-An end-to-end, serverless billing automation project that extracts billing details from uploaded files and sends real-time receipt emails  by AWS cloud and Machine Learning.
+This project is a fully automated, serverless billing system that extracts data from uploaded PDFs/images and sends real-time billing receipt emails — powered by AWS Cloud and Machine Learning.
 
-## 📦 Tech Stack
+---
 
-- **Amazon S3** – File storage and upload trigger
-- 
-- **AWS Lambda** – Serverless backend logic
--   
-- **Amazon Textract** – ML-powered document data extraction
--   
-- **Amazon DynamoDB** – Structured data storage
-- 
-- **Amazon SES** – Email service for sending receipts
--   
-- **IAM** – Secure access management between services
--  
-- **Python** – Lambda function logic
+## 🚀 Tech Stack
 
-## 📌 Features
+- **Amazon S3** – For storing uploaded bills (PDFs/Images)
+- **AWS Lambda** – Core logic for processing and automation
+- **Amazon Textract** – ML model for extracting key-value data from documents
+- **Amazon DynamoDB** – Stores structured billing data
+- **Amazon SES** – Sends email receipts
+- **IAM** – Secure roles and access control between services
+- **Python** – Used for Lambda functions
 
-- Upload bill (PDF/Image) to S3
-- 
-- Automatically trigger Lambda
-- 
-- Extract key-value pairs using Amazon Textract
-- 
-- Store extracted data in DynamoDB
-- 
-- Send a confirmation email to the customer using Amazon SES
-- 
-- Fully serverless and automated workflow
+---
 
-## 🔁 Workflow
+## 💡 Features
+
+- Upload a bill (PDF or image) to S3
+- Automatically trigger a Lambda function
+- Extract billing details using Amazon Textract
+- Save the structured data to DynamoDB
+- Email the receipt to the customer using SES
+- 100% Serverless and real-time automation
+
+---
+
+## 🔁 Workflow Overview
 
 ```mermaid
 graph TD;
-    A[File Upload to S3] --> B[Trigger Lambda Function]
-    B --> C[Textract - Extract Data]
-    C --> D[Process & Store in DynamoDB]
-    D --> E[Send Email via SES]
-
-##🚀 How to Deploy
-Ensure you have an AWS account and permissions to use the mentioned services.
-
-Create an S3 Bucket
-
-Set up event trigger for object uploads
-
-Set Up Textract Permissions
-
-Grant Lambda access to Textract using IAM
-
-Deploy Lambda Function
-
-Configure environment variables for:
-
-TABLE_NAME
-
-SENDER_EMAIL
-
-REGION
-
-S3_BUCKET
-
-Add logic to handle extraction and email sending
-
-Create DynamoDB Table
-
-With keys like invoice_id, customer_name, amount
-
-Verify SES Email Address (If in Sandbox)
-
-Verify both sender and receiver emails
+    A[📤 File Uploaded to S3] --> B[⚙️ Lambda Triggered]
+    B --> C[🧠 Amazon Textract Extracts Data]
+    C --> D[💾 Data Stored in DynamoDB]
+    D --> E[✉️ Email Sent via Amazon SES]
