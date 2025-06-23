@@ -31,11 +31,11 @@ This project is a fully automated, serverless billing system that extracts data 
 
 1.Create an S3 Bucket
 
- Enable event trigger on object creation for Lambda
+    Enable event trigger on object creation for Lambda
 
 2.Deploy Lambda Function
 
-  Add environment variables like:
+   Add environment variables like:
 
     TABLE_NAME, SENDER_EMAIL, RECIPENT_EMAIL
 
@@ -46,14 +46,15 @@ This project is a fully automated, serverless billing system that extracts data 
 
 3.Set Up DynamoDB
 
-Create a table with appropriate keys (e.g., invoice_id)
+    Create a table with appropriate keys (e.g., invoice_id)
 
 4.Verify Email in SES
 
-verify sender email addresses
+     verify sender email addresses
 
 
-##📌 Key Takeaways
+## 📌 Key Takeaways
+
 S3: Learned how to trigger workflows on file uploads
 
 DynamoDB: Understood fast, flexible NoSQL data modeling
