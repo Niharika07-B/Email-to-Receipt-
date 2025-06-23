@@ -12,7 +12,7 @@ dynamodb = boto3.resource('dynamodb')
 ses = boto3.client('ses')
 
 # Environment variables
-DYNAMODB_TABLE = os.environ.get('DYNAMODB_TABLE', 'Receipts')
+DYNAMODB_TABLE = os.environ.get('DYNAMODB_TABLE', 'Receipts-Niharika')
 SES_SENDER_EMAIL = os.environ.get('SES_SENDER_EMAIL', 'niharika.bandaru5002@gmail.com')
 SES_RECIPIENT_EMAIL = os.environ.get('SES_RECIPIENT_EMAIL', 'niharika.bandaru5002@gmail.com')
 
